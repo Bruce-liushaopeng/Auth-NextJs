@@ -49,6 +49,10 @@ function AuthForm() {
         password: enteredPassword,
       });
 
+      if (!result.error) {
+        // means login successed
+      }
+
       console.log(result);
     } else {
       try {
