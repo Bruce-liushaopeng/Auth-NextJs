@@ -1,10 +1,14 @@
 import Link from "next/link";
-import { useSession } from "next-auth/client";
+import { useSession, signOut } from "next-auth/client";
 
 import classes from "./main-navigation.module.css";
 
 function MainNavigation() {
   const [session, loading] = useSession();
+
+  function logoutHandler() {
+    signOut(); // will clear the cokie and the user information
+  }
 
   console.log("session", session);
   console.log("loading", loading);
@@ -30,7 +34,7 @@ function MainNavigation() {
           )}
           {session && (
             <li>
-              <button>Logout</button>
+              <button onClick={logoutHandler}>Logout</button>
             </li>
           )}
         </ul>
