@@ -9,9 +9,6 @@ function MainNavigation() {
   function logoutHandler() {
     signOut(); // will clear the cokie and the user information
   }
-
-  console.log("session", session);
-  console.log("loading", loading);
   return (
     <header className={classes.header}>
       <Link href="/">
