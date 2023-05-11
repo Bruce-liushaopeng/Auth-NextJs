@@ -41,7 +41,7 @@ function AuthForm() {
 
     if (isLogin) {
       // provider type
-      // by default nextauth will redirect us to a different page, here we se that to false
+      // by default nextauth will redirect us to a different page, here we set that to false
       // the whole second parameter is passed to backend 'authorize' function as the "credential" parameter
       const result = await signIn("credentials", {
         redirect: false,
